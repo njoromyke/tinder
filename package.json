@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "start": " node server",
-    "build": " react-scripts build",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix tinder-clone && npm run build --prefix tinder-clone"
+    "build": " react-scripts build"
   },
   "keywords": [],
   "author": "",

@@ -8,16 +8,13 @@ import path from "path";
 const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, "build")));
-app.get("*", (req, res) =>
+app.get("/", (req, res) =>
   res.sendFile(path.resolve(__dirname, "build", "index.html"))
 );
 app.use(cors());
 connectDB();
 app.use(express.json());
 const PORT = process.env.PORT || 5000;
-app.get("/", (req, res) => {
-  res.status(200).send("hello");
-});
 
 app.post("/tinder/card", async (req, res) => {
   const dbCard = req.body;
