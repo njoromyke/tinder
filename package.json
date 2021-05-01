@@ -1,0 +1,21 @@
+{
+  "name": "tinder-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": " node server",
+    "build": " react-scripts build",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix tinder-clone && npm run build --prefix tinder-clone"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "supervisor": "^0.12.0"
+  }
+}
